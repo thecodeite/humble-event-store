@@ -6,8 +6,8 @@
   "scripts": {
     "test": "mocha specs/unit/**/*.spec.js"
   },
-  "engines" : {
-    "node" : ">4.0.0"
+  "engines": {
+    "node": ">4.0.0"
   },
   "repository": {
     "type": "git",
@@ -32,6 +32,7 @@
   },
   "dependencies": {
     "flake-idgen": "^1.0.0",
-    "moment": "^2.10.6"
+    "moment": "^2.10.6",
+    "ndjson": "^1.4.2"
   }
 }

@@ -10,6 +10,12 @@ function createEventProjection(eventProjectionName, eventStore, objectStore) {
   if(!eventStore) throw new Error('tried to createEventProjection but passed invalid eventStore');
   if(!objectStore) throw new Error('tried to createEventProjection but passed invalid objectStore');
 
+  if(typeof(objectStore.getById) !== 'function')
+    throw new Error('Can not create EventProjection without objectStore that supports "getById"');
+
+  if(typeof(objectStore.set) !== 'function')
+    throw new Error('Can not create EventStore without eventPersistence that supports "set"');
+
   function EventProjection() {}
   util.inherits(EventProjection, EventEmitter);
 

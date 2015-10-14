@@ -7,6 +7,16 @@ const flake = new (require('flake-idgen'))();
 
 function EventStore(name, eventPersistence) {
   if(!eventPersistence) throw new Error('Can not create EventStore without event persistance');
+
+  if(typeof(eventPersistence.nextVersion) !== 'function')
+    throw new Error('Can not create EventStore without eventPersistence that supports "nextVersion"');
+
+  if(typeof(eventPersistence.storeEvent) !== 'function')
+    throw new Error('Can not create EventStore without eventPersistence that supports "storeEvent"');
+
+  if(typeof(eventPersistence.forEach) !== 'function')
+    throw new Error('Can not create EventStore without eventPersistence that supports "forEach"');
+
   this.name = name;
   this.eventPersistence = eventPersistence;
 }

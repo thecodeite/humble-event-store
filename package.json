@@ -4,7 +4,10 @@
   "description": "An opinion on doing event sourcing",
   "main": "./src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha specs/unit/**/*.spec.js"
+  },
+  "engines" : {
+    "node" : ">4.0.0" 
   },
   "repository": {
     "type": "git",
@@ -21,5 +24,14 @@
   "bugs": {
     "url": "https://github.com/thecodeite/humble-event-store/issues"
   },
-  "homepage": "https://github.com/thecodeite/humble-event-store#readme"
+  "homepage": "https://github.com/thecodeite/humble-event-store#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "chai-as-promised": "^5.1.0",
+    "sinon": "^1.17.1"
+  },
+  "dependencies": {
+    "flake-idgen": "^1.0.0",
+    "moment": "^2.10.6"
+  }
 }

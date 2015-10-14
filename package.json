@@ -1,13 +1,13 @@
 {
   "name": "humble-event-store",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An opinion on doing event sourcing",
   "main": "./src/index.js",
   "scripts": {
     "test": "mocha specs/unit/**/*.spec.js"
   },
   "engines" : {
-    "node" : ">4.0.0" 
+    "node" : ">4.0.0"
   },
   "repository": {
     "type": "git",

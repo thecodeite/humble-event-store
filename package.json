@@ -1,0 +1,25 @@
+{
+  "name": "humble-event-store",
+  "version": "0.0.1",
+  "description": "An opinion on doing event sourcing",
+  "main": "./src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thecodeite/humble-event-store.git"
+  },
+  "keywords": [
+    "event-sourcing"
+  ],
+  "author": {
+    "name": "Sam Plews",
+    "url": "http://github.com/thecodeite/"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thecodeite/humble-event-store/issues"
+  },
+  "homepage": "https://github.com/thecodeite/humble-event-store#readme"
+}

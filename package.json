@@ -1,6 +1,6 @@
 {
   "name": "humble-event-store",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An opinion on doing event sourcing",
   "main": "./src/index.js",
   "scripts": {

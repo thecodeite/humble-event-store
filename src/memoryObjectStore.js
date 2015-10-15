@@ -1,14 +1,15 @@
 module.exports = MemoryObjectStore;
 
-const entities = [];
+
 
 function MemoryObjectStore() {
+  this.entities = [];
 }
 
 MemoryObjectStore.prototype.getById = function (id) {
   return new Promise((resolve, reject) => {
     process.nextTick(() => {
-      resolve(entities[id]);
+      resolve(this.entities[id]);
     });
   });
 };
@@ -16,7 +17,7 @@ MemoryObjectStore.prototype.getById = function (id) {
 MemoryObjectStore.prototype.set = function(id, object) {
   return new Promise((resolve, reject) => {
     process.nextTick(() => {
-      entities[id] = object;
+      this.entities[id] = object;
       resolve();
     });
   });
